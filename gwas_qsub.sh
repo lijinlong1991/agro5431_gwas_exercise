@@ -3,6 +3,7 @@
 #PBS -o /home/agro5431/mcnis003/gwas_exercise/gwas_o
 #PBS -e /home/agro5431/mcnis003/gwas_exercise/gwas_e
 #PBS -N gwas
+#PBS -q ram256g
 
 cd /home/agro5431/mcnis003/gwas_exercise
 ln -s /home/agro5431/shared/GAPIT.RNAseq.hmp_438K_imputed2_no_quotes.csv gwas_genotypes.csv
