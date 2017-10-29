@@ -33,6 +33,8 @@ if(n_lines<503){
   genotypes <- cbind(markers_defs, genotypes)
 }
 
+genotypes <- genotypes[sample(ncol(genotypes), ncol(genotypes)/2),]
+
 names(genotypes) <- toupper(names(genotypes))
 
 phenotypes <- read.csv(phenotype_file, header = T, skip = 2)[,c(1:4)]
