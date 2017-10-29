@@ -1,5 +1,5 @@
 #!/bin/bash
-#PBS -l walltime=01:00:00,nodes=1:ppn=16,mem=16gb
+#PBS -l walltime=01:00:00,nodes=1:ppn=16,pmem=5gb
 #PBS -o /home/agro5431/mcnis003/gwas_exercise/gwas_o
 #PBS -e /home/agro5431/mcnis003/gwas_exercise/gwas_e
 #PBS -N gwas
