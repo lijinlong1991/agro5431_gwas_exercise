@@ -26,10 +26,12 @@ if(debug_mode == TRUE){
   genotypes <- read.csv(genotype_file, header = T)[,-c(2,5:11)]
 }
 
-markers_defs <- genotypes[, c(1:3)]
-genotypes <- genotypes[, -c(1:3)]
-genotypes <- genotypes[, sample(ncol(genotypes), n_lines)]
-genotypes <- cbind(markers_defs, genotypes)
+if(n_lines<503){
+  markers_defs <- genotypes[, c(1:3)]
+  genotypes <- genotypes[, -c(1:3)]
+  genotypes <- genotypes[, sample(ncol(genotypes), n_lines)]
+  genotypes <- cbind(markers_defs, genotypes)
+}
 
 names(genotypes) <- toupper(names(genotypes))
 
