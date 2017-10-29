@@ -33,7 +33,7 @@ if(n_lines<503){
   genotypes <- cbind(markers_defs, genotypes)
 }
 
-genotypes <- genotypes[sample(ncol(genotypes), ncol(genotypes)/2),]
+genotypes <- genotypes[sample(nrow(genotypes), nrow(genotypes)/2),]
 
 names(genotypes) <- toupper(names(genotypes))
 
