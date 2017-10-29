@@ -6,7 +6,7 @@ args <- commandArgs(trailingOnly = TRUE)
 require("rrBLUP")
 library("rrBLUP")
 
-args = c("/Users/ianmcnish/GoogleDrive/courses/genomics_ta/gwas","GAPIT.RNAseq.hmp_438K_imputed2_rrblup.csv","tpc119982SupplementalDS6.csv",3,1,503,"TRUE")
+#args = c("/Users/ianmcnish/GoogleDrive/courses/genomics_ta/gwas","GAPIT.RNAseq.hmp_438K_imputed2_rrblup.csv","tpc119982SupplementalDS6.csv",3,1,503,"TRUE")
 
 #import genotype and phenotype files
 working_directory <- args[1]
