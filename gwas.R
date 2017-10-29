@@ -6,15 +6,15 @@ args <- commandArgs(trailingOnly = TRUE)
 require("rrBLUP")
 library("rrBLUP")
 
-#args = c("/Users/ianmcnish/GoogleDrive/courses/genomics_ta/gwas","GAPIT.RNAseq.hmp_438K_imputed2_rrblup.csv","tpc119982SupplementalDS6.csv",1,1,503,"TRUE")
+args = c("/Users/ianmcnish/GoogleDrive/courses/genomics_ta/gwas","GAPIT.RNAseq.hmp_438K_imputed2_rrblup.csv","tpc119982SupplementalDS6.csv",3,1,503,"TRUE")
 
 #import genotype and phenotype files
 working_directory <- args[1]
 genotype_file <- args[2]
 phenotype_file <- args[3]
-n_core <- args[4]
-n_pc <- args[5]
-n_lines <- args[6]
+n_core <- as.numeric(args[4])
+n_pc <- as.numeric(args[5])
+n_lines <- as.numeric(args[6])
 debug_mode <- args[7]
 
 setwd(working_directory)
