@@ -5,9 +5,9 @@
 #PBS -N gwas
 
 cd /home/agro5431/mcnis003/gwas_exercise
-ln -s /home/agro5431/Shared/gwas_exercise/GAPIT.RNAseq.hmp_438K_imputed2_no_quotes.csv gwas_genotypes.csv
-ln -s /home/agro5431/Shared/gwas_exercise/tpc119982SupplementalDS6.csv gwas_phenotypes.csv
+ln -s /home/agro5431/Shared/GAPIT.RNAseq.hmp_438K_imputed2_no_quotes.csv gwas_genotypes.csv
+ln -s /home/agro5431/Shared/tpc119982SupplementalDS6.csv gwas_phenotypes.csv
 module load perl
 perl convert_for_rrblup.pl -i gwas_genotypes.csv -o genotypes_rrblup.csv -f 12 -l 514
 module load R/3.3.3
-Rscript gwas.R /home/agro5431/mcnis003/gwas_exercise/ genotypes_rrblup.csv gwas_phenotypes.csv 16 1 503 TRUE
+Rscript gwas.R /home/agro5431/mcnis003/gwas_exercise/ genotypes_rrblup.csv gwas_phenotypes.csv 16 1 503 FALSE
