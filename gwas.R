@@ -21,9 +21,9 @@ setwd(working_directory)
 
 #format genotype file line names to uppercase to match phenotype
 if(debug_mode == TRUE){
-  genotypes <- read.csv(genotype_file, header = T, nrows = 1000)[,-c(2,5:11)]
+  genotypes <- read.csv(genotype_file, header = T, nrows = 100000)[, -c(2,5:11)]
 }else{
-  genotypes <- read.csv(genotype_file, header = T)[,-c(2,5:11)]
+  genotypes <- read.csv(genotype_file, header = T)[, -c(2,5:11)]
 }
 
 if(n_lines<503){
@@ -33,7 +33,7 @@ if(n_lines<503){
   genotypes <- cbind(markers_defs, genotypes)
 }
 
-genotypes <- genotypes[sample(nrow(genotypes), nrow(genotypes)/2),]
+#genotypes <- genotypes[sample(nrow(genotypes), nrow(genotypes)/2),]
 
 names(genotypes) <- toupper(names(genotypes))
 
