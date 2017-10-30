@@ -1,9 +1,8 @@
 #!/bin/bash
-#PBS -l walltime=00:35:00,nodes=1:ppn=16,pmem=32gb
+#PBS -l walltime=00:35:00,nodes=1:ppn=16,pmem=6gb
 #PBS -o /home/agro5431/<user>/gwas_exercise/gwas_o
 #PBS -e /home/agro5431/<user>/gwas_exercise/gwas_e
 #PBS -N gwas
-#PBS -q ram256g
 #PBS -m abe
 #PBS -M <user>@umn.edu
 
